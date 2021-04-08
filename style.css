@@ -1,0 +1,194 @@
+body, p{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    margin-left: auto;
+    padding: 2em;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav img {
+    height: 20px;
+}
+
+#myTopnav {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 6.5em auto;
+    text-align: center;
+    justify-content: center;
+}
+
+main p{
+    margin-top: 30px;
+    justify-content: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+.txt {
+    color: blue;
+}
+
+input {
+    width: 80%;
+    padding: 1em;
+    border-radius: 30px;
+    border: 1px solid grey;
+}
+
+.btns {
+    margin-top: 1em;
+    display: flex;
+}
+
+.btns button {
+    padding: 1em;
+    border: none;
+    margin-left: 50px;
+}
+
+footer {
+    background-color: rgb(238, 228, 228);
+}
+
+.footer_top {
+    padding: 1em;
+}
+
+.footer_bottom {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid grey;
+}
+
+.left a {
+    margin-right: 1em;
+}
+
+.right a {
+    margin-right: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow: hidden;
+    }
+
+    main {
+        justify-content: center;
+    }
+
+
+    .btns {
+        flex-direction: row;
+    }
+
+    .btns button {
+        padding: 10px 10px;
+    }
+
+    .btn2 {
+        margin-left: 5px;
+    }
+    
+    main {
+        margin: 3em auto;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    #myTopnav {
+        display: block;
+    }
+
+    /* Makes Hamburger Heading Visible On Mobile Only */
+    .topnav .icon, #myTopnav, .active {
+        visibility: visible;
+        z-index: 10000;
+    }
+
+    /* Width Of Hamburger Navigation */
+    .topnav {
+        width: 100%;
+        height: 60px;
+    }
+
+    /* Removes Desktop Heading & Navigation */
+    .nav, .top-heading {
+        display: none;
+    }
+   /* Background And Overflow Of Hamburger Navigation */
+    .topnav {
+        background: linear-gradient(to top, #ff6699 0%, #ff9999 100%);
+        overflow: hidden;
+    }
+
+    /* Link Style Inside Hamburger Navigation */
+    .topnav a {
+       float: left;
+       display: block;
+       color: #ffffff;
+       text-align: center;
+       padding: 15px 20px;
+       text-decoration: none;
+       font-family: 'Alegreya Sans SC', sans-serif;
+       font-size: 28px;
+    }
+
+    /* Link Properties On Hover */
+    .topnav a:hover {
+       color: black;
+    }
+
+    
+
+    /* Closed Hamburger Properties */
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+       float: right;
+       display: block;
+    }
+
+    /* Open Hamburger Properties */
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+       position: absolute;
+       font-size: 25px;
+       right: 0%;
+       top: 0;
+    }
+
+    /* Open Link Properties */
+    .topnav.responsive a {
+       float: none;
+       display: block;
+       text-align: left;
+       font-size: 15px;
+    }
+} 
